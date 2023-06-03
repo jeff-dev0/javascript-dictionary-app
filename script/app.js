@@ -53,22 +53,28 @@ const searchWord = async function () {
                     </div>
                 </div> 
             `);
+            wordDeterminer = '';
         } else {
             throw new Error(`Word Is Not Found!`)
-        }
+
+        };
     }
     catch (err) {
-        alert('Word Is Not Found! Try Again:)')
+        if (searchInput.value === '') {
+            alert('Please type a word!')
+        } else {
+            alert('Word Is Not Found! Try Again:)')
+        }
     }
 };
 
+// generate sound of pronunciation 
 function playPronunciation(element) {
     const audio = element.parentElement.querySelector('.sound');
     audio.play();
 };
 
-
-
+// event listenners
 searchBtn.addEventListener('click', searchWord);
 searchInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') searchWord();

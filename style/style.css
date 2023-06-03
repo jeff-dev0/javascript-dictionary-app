@@ -25,12 +25,13 @@ body {
 
 .container {
     background-color: var(--bright-color);
-    width: 450px;
+    width: 370px;
+    margin: auto;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    padding: 80px 50px;
+    padding: 30px 30px;
     border-radius: 10px;
     box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
 }
@@ -50,6 +51,8 @@ body {
     font-size: 16px;
     background: none;
     color: var(--text-color);
+    background-color: var(--bright-color);
+
 }
 
 .search-box i {
@@ -66,8 +69,12 @@ body {
 .pronunciation {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: .8rem 0;
+}
+
+.phonetic {
+    margin-right: 2.5rem;
 }
 
 .box {
